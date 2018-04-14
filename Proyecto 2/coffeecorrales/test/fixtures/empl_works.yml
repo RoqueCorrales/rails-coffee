@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  farmer: one
+  user: one
+  work: one
+  start_date: MyString
+  end_date: MyString
+
+two:
+  farmer: two
+  user: two
+  work: two
+  start_date: MyString
+  end_date: MyString

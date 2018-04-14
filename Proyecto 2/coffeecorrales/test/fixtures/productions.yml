@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  semana: 1
+  cajuelas: 1
+  user: one
+  farmer: one
+  date: 2018-04-13
+
+two:
+  semana: 1
+  cajuelas: 1
+  user: two
+  farmer: two
+  date: 2018-04-13

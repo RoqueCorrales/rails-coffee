@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  treatment: MyString
+  description: MyString
+  date: MyString
+  farmer: one
+
+two:
+  treatment: MyString
+  description: MyString
+  date: MyString
+  farmer: two
