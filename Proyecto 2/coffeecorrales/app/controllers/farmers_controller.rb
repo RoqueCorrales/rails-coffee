@@ -1,5 +1,6 @@
 class FarmersController < ApplicationController
   before_action :set_farmer, only: [:show, :update, :destroy]
+  skip_before_action :authenticate, only: [:create, :index]
 
   # GET /farmers
   def index

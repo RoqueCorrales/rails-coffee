@@ -7,11 +7,13 @@ var USER = USER ||{
       $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/sessions',
-        
+        debug,
         contentType: 'application/json',
         data: JSON.stringify( {username:$('#username').val(),password: $('#password').val(),} ),
+        
         success: function(data){
-          alert( 'ok');
+          
+          alert( 'Inicio de Session exitosa.');
           localStorage.setItem("token", data);
           
           window.location.replace("index.html");
@@ -19,11 +21,20 @@ var USER = USER ||{
         },
         error: function(){
           
-          alert("error");
+          alert("Problema al Iniciar Registro.");
         }
       });
     },
-  
+
+    signOut: function () {
+    localStorage.clear();
+    alert("Cerrando Sesiòn.");
+     
+    window.location.replace("login.html");
+
+
+      
+    },
     // CREAR USUARIO
     crearUsuario: function () {
       $.ajax({
@@ -40,7 +51,7 @@ var USER = USER ||{
   
         },
         error: function(){
-          alert('error');
+          alert('Problema al registrar Usuario');
         }
       });
     },
@@ -57,7 +68,7 @@ var USER = USER ||{
          
            this.crearUsuario();
         }else{
-            alert('password not match')
+            alert('Contraseñas no iguales.')
         }
         
 

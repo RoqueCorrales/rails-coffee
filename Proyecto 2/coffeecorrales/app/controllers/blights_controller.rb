@@ -1,5 +1,6 @@
 class BlightsController < ApplicationController
   before_action :set_blight, only: [:show, :update, :destroy]
+  skip_before_action :authenticate, only: [:create, :index]
 
   # GET /blights
   def index
