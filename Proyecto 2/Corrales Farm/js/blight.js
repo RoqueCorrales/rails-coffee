@@ -7,7 +7,7 @@ var BLIGHT = BLIGHT ||{
         url: 'http://localhost:3000/blights',
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify( {blight:{treatment:$('#treatment').val(),description:$('#description').val(),date:$('#date').val()}} ),
+        data: JSON.stringify( {blight:{treatment:$('#treatment').val(),description:$('#description').val(),date:$('#date').val(),farmer_id:$('#id_farmer').val()}} ),
         success: function(data){
           alert( 'Blight registrado con exito');
           $('#formRegister').trigger("reset"); 

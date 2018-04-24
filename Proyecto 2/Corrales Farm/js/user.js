@@ -7,7 +7,7 @@ var USER = USER ||{
       $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/sessions',
-        debug,
+       
         contentType: 'application/json',
         data: JSON.stringify( {username:$('#username').val(),password: $('#password').val(),} ),
         
