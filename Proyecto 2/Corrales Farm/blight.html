@@ -17,14 +17,14 @@
 	/* Para obtener el valor */
 	var cod = document.getElementById("seleccion").value;
 	document.getElementById("id_farmer").value = cod;
-	alert(document.getElementById("id_farmer").value);
+	
 	 
 	
 	}
 	</script>
 
 
-<body onload="FARMER.getFarmersCombo()">
+<body onload="FARMER.getFarmersCombo(); BLIGHT.getBlights();">
 
 <!------ Include the above in your HEAD tag ---------->
 
@@ -58,7 +58,7 @@
 			    			</div>
 							
 			    			<div class="form-group">
-			    				<input type="text" name="treatment" id="treatment" class="form-control input-sm" placeholder="treatment">
+			    				<input type="text" name="treatment" id="treatment" class="form-control input-sm" placeholder="Treatment">
                             </div>
 							<div class="form-group" style="display: none;">
 									<input type="text" name="id_farmer" id="id_farmer" class="form-control input-sm" >
@@ -70,16 +70,39 @@
 
 			    		
 			    			
-							<button  onclick="BLIGHT.crearBlight()
+							<button  onclick="BLIGHT.crearBlight();
 							" type="button" name="button">Save</button>
-							<button  onclick="BLIGHT.back()" type="button" name="button">Back</button>
+						
 			    		
 			    		</form>
 			    	</div>
 	    		</div>
     		</div>
     	</div>
-    </div>
+	</div>
+	
+<div class="container">
+	<h2>Blights</h2>
+	<p>Blight is a rapid and complete chlorosis, browning, then death of plant tissues such as leaves, branches, twigs, or floral organs</p>   
+   <table class="table table-hover" >
+	  <thead>
+		<tr>
+		  <th>Treatment</th>
+		  <th>Farmer</th>
+		  <th>Start Date</th>
+		  <th>Description</th>
+		  
+		</tr>
+	  </thead>
+	  <tbody id="BlightTable">
+	  
+		
+	  </tbody>
+	  <button  onclick="location.reload();" type="button" name="button">Refresh</button>
+	</table>
+	<button  onclick="BLIGHT.back()" type="button" name="button">Back</button>
+  </div>
+  
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>

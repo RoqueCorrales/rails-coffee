@@ -1,5 +1,6 @@
 class ProductionsController < ApplicationController
   before_action :set_production, only: [:show, :update, :destroy]
+  skip_before_action :authenticate, only: [:create, :index]
 
   # GET /productions
   def index

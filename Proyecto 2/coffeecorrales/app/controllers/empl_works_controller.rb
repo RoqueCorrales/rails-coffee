@@ -1,5 +1,6 @@
 class EmplWorksController < ApplicationController
   before_action :set_empl_work, only: [:show, :update, :destroy]
+  skip_before_action :authenticate, only: [:create, :index]
 
   # GET /empl_works
   def index

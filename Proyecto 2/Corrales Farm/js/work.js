@@ -66,6 +66,27 @@ var WORK = WORK ||{
       });
     },
 
+    getWorksCombo:function() {
+      $.ajax({
+        method: "GET",
+        url: "http://localhost:3000/works"
+      }).done(function( response ) {
+        
+        response.forEach(function(element) {
+      console.log(element);
+          var option = document.createElement("option"); //Creas el elemento opción
+        $(option).html(element.name); //Escribes en él el nombre de la provincia
+        
+        $(option).val(element.id);
+        console.log($(option).val());
+        $(option).appendTo("#seleccionWorks"); //Lo metes en el select con id provincias
+        });
+         
+      }).fail(function (error){
+       
+        alert('error');
+      });
+    },
 
     delete: function(id){
   console.log(getElementById('editbtn'));

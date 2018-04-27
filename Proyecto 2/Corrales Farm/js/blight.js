@@ -32,8 +32,10 @@ var BLIGHT = BLIGHT ||{
       
         var row = "<tr>";
         row += "<td>"+element.treatment+"</td>";
-        row += "<td>"+element.description+"</td>";
         row += "<td>"+element.farmer_id+"</td>";
+        row += "<td>"+element.farmer_id+"</td>";
+        row += "<td>"+element.description+"</td>";
+       
         
         row += "<tr/>";
         $("#BlightTable").append(row);
@@ -47,10 +49,11 @@ var BLIGHT = BLIGHT ||{
         
         response.forEach(function(element) {
       console.log(element);
-          var row = "<tr>";
-          row += "<td>"+element.treatment+"</td>";
-          row += "<td>"+element.description+"</td>";
-          row += "<td>"+element.farmer_id+"</td>";
+      var row = "<tr>";
+      row += "<td>"+element.treatment+"</td>";
+      row += "<td>"+element.farmer_id+"</td>";
+      row += "<td>"+element.farmer_id+"</td>";
+      row += "<td>"+element.description+"</td>";
           
           
           row += "<td>"+"<button type='button'  onclick='BLIGHT.edit("+element.id+")'id='editbtn' value='element.id' class='btn btn-default'>Edit</button>"+"</td>";
@@ -66,6 +69,10 @@ var BLIGHT = BLIGHT ||{
       });
     },
 
+
+
+    
+   
 
     delete: function(id){
   console.log(getElementById('editbtn'));

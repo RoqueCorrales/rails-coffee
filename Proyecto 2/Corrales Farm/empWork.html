@@ -35,7 +35,7 @@
 	</script>
 
 
-<body onload="FARMER.getFarmersCombo(); USER.getUsersCombo(); PRODUCTION.getProduction()">
+<body onload="FARMER.getFarmersCombo(); USER.getUsersCombo(); WORK.getWorksCombo(); EMPWORK.getEMP();">
     
 
 <!------ Include the above in your HEAD tag ---------->
@@ -68,7 +68,15 @@
 
 											
 										  </div>
-										
+										  
+										  <div class="form-group">
+											<h3>Work:</h3>
+                                            <select id="seleccionWorks" onchange="showWorks();"></select>
+                                            
+                                              
+
+											
+                                          </div>
                                       		    					
                                     
 			    				</div>
@@ -82,25 +90,22 @@
 								<div class="form-group" style="display: none;">
 									<input type="text" name="id_User" id="id_user" class="form-control input-sm" >
 								</div>
-								
+								<div class="form-group" style="display: none;">
+									<input type="text" name="id_Work" id="id_work" class="form-control input-sm" >
+								</div>
 							
 								
 			    					<div class="form-group">
-			    						<input type="date" name="dateStart" id="date" class="form-control input-sm" placeholder="Date">
+			    						<input type="date" name="dateStart" id="dateStart" class="form-control input-sm" placeholder="Start Date">
 			    					</div>
 								
 									<div class="form-group">
-			    						<input type="number" name="week" id="week" class="form-control input-sm" placeholder="week">
-									</div>
-									
-									<div class="form-group">
-			    						<input type="number" name="cajuelas" id="cajuelas" class="form-control input-sm" placeholder="cajuelas">
+			    						<input type="date" name="dateEnd" id="dateEnd" class="form-control input-sm" placeholder="End Date">
 			    					</div>
-
 
 			    		
 			    			
-							<button  onclick="PRODUCTION.crearProduction()" type="button" name="button">Save</button>
+							<button  onclick="EMPWORK.crearEmpWork()" type="button" name="button">Save</button>
 						
 			    		
 			    		</form>
@@ -111,27 +116,27 @@
 	</div>
 	
 <div class="container">
-	<h2>Production</h2>
+	<h2>EMPWORK</h2>
 	<p>to perform work or fulfill duties regularly for wages or salary </p>   
    <table class="table table-hover" >
 	  <thead>
 		<tr>
 		  <th>User</th>
           <th>Farmer</th>
-          <th>Week</th>
-           <th>Date</th>
-          <th>Cajuelas</th>
+          <th>Work</th>
+           <th>Start Date</th>
+          <th>End Date</th>
 		  
 		  
 		</tr>
 	  </thead>
-	  <tbody id="ProductionTable">
+	  <tbody id="EmpWorkTable">
 	  
 		
 	  </tbody>
 	  <button  onclick="location.reload();" type="button" name="button">Refresh</button>
 	</table>
-	<button  onclick="FARMER.back()" type="button" name="button">Back</button>
+	<button  onclick="BLIGHT.back()" type="button" name="button">Back</button>
   </div>
   
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -139,11 +144,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+<script src="js/blight.js"></script>
 <script src="js/farmer.js"></script>
-<script src="js/production.js"></script>
+<script src="js/work.js"></script>
 <script src="js/user.js"></script>
-
+<script src="js/empWork.js"></script>
 
 </body>
 
